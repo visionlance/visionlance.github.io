@@ -3,102 +3,274 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="VisionLance — creative websites and digital experiences for growing ideas.">
-  <title>VisionLance | Websites That Move Ideas Forward</title>
+  <meta name="description" content="VisionLance creates clean, modern websites and digital experiences for people and businesses.">
+  <meta name="theme-color" content="#07111f">
+  <title>VisionLance — Websites That Move Ideas Forward</title>
   <style>
     :root {
-      --bg: #080d19; --panel: #101a2d; --panel2: #14213a;
-      --text: #f4f7ff; --muted: #aab6cc; --blue: #65a9ff;
-      --yellow: #ffd45c; --line: rgba(255,255,255,.12);
-      --brand-navy: #071b3b; --brand-cyan: #00c5e9;
+      --bg: #07111f;
+      --bg-soft: #0b192b;
+      --panel: #10233a;
+      --panel-light: #142b45;
+      --text: #f4f8ff;
+      --muted: #aab9cc;
+      --cyan: #08c8e8;
+      --blue: #4c9fff;
+      --line: rgba(177, 207, 240, .15);
+      --radius: 22px;
+      --max: 1160px;
     }
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
     body {
-      margin: 0; font-family: Inter, ui-sans-serif, system-ui, Arial, sans-serif;
-      color: var(--text); background:
-        radial-gradient(circle at 85% 5%, rgba(55,119,220,.22), transparent 30%),
-        radial-gradient(circle at 5% 40%, rgba(255,212,92,.08), transparent 25%), var(--bg);
+      margin: 0; background: var(--bg); color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.6;
     }
     a { color: inherit; text-decoration: none; }
-    .wrap { width: min(1100px, 90%); margin: auto; }
-    header {
-      position: sticky; top: 0; z-index: 5;
-      background: rgba(232, 246, 253, .97);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(7, 27, 59, .10);
-      box-shadow: 0 5px 24px rgba(7, 27, 59, .10);
+    button, input, textarea, select { font: inherit; }
+    .container { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
+    .topbar {
+      position: sticky; top: 0; z-index: 50; background: rgba(7,17,31,.88);
+      backdrop-filter: blur(18px); border-bottom: 1px solid var(--line);
     }
-    nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .logo { font-size: 1.42rem; font-weight: 900; letter-spacing: -.9px; color: var(--brand-navy); white-space: nowrap; }
-    .logo span { color: var(--brand-cyan); }
-    .navlinks { display: flex; gap: 28px; color: #28415f; font-size: .94rem; font-weight: 650; }
-    .navlinks a { transition: color .2s ease; }
-    .navlinks a:hover { color: #008eae; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 19px; border-radius: 12px; font-weight: 800; background: var(--brand-cyan); color: #06172d; transition: transform .2s, filter .2s; box-shadow: 0 7px 20px rgba(0,197,233,.16); }
-    .btn:hover { transform: translateY(-2px); filter: brightness(1.05); }
-    .btn.outline { background: transparent; color: #eaf4ff; border: 1px solid rgba(0,197,233,.48); box-shadow: none; }
-    .hero { padding: 100px 0 88px; display: grid; grid-template-columns: 1.2fr .8fr; gap: 50px; align-items: center; }
-    .eyebrow { color: var(--yellow); text-transform: uppercase; letter-spacing: 2px; font-size: .78rem; font-weight: 800; }
-    h1 { font-size: clamp(2.7rem, 6vw, 5.2rem); line-height: 1.04; letter-spacing: -3px; margin: 17px 0 22px; }
-    h1 span { color: var(--blue); }
-    .lead { color: var(--muted); font-size: 1.12rem; max-width: 580px; }
-    .actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 30px; }
-    .hero-card { border: 1px solid var(--line); border-radius: 24px; padding: 28px; background: linear-gradient(145deg, rgba(20,33,58,.95), rgba(12,20,36,.9)); box-shadow: 0 25px 80px rgba(0,0,0,.25); }
-    .orb { width: 100%; aspect-ratio: 1.25; border-radius: 18px; display: grid; place-items: center; background: radial-gradient(circle at 50% 40%, #274d83, #111d34 65%); overflow: hidden; }
-    .orb-mark { font-size: clamp(3rem, 8vw, 6rem); font-weight: 950; letter-spacing: -8px; color: var(--yellow); text-shadow: 0 0 35px rgba(101,169,255,.55); }
-    .mini-stats { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; margin-top: 15px; }
-    .stat { padding: 14px; background: rgba(255,255,255,.04); border: 1px solid var(--line); border-radius: 13px; }
-    .stat strong { display: block; font-size: 1.05rem; } .stat small { color: var(--muted); }
-    section { padding: 72px 0; }
-    .section-head { max-width: 650px; margin-bottom: 30px; }
-    h2 { font-size: clamp(2rem,4vw,3rem); line-height: 1.15; margin: 9px 0 12px; letter-spacing: -1.4px; }
-    .muted { color: var(--muted); }
-    .cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 17px; }
-    .card { background: rgba(16,26,45,.82); border: 1px solid var(--line); border-radius: 18px; padding: 23px; }
-    .card .icon { font-size: 1.7rem; }
-    .card h3 { margin: 12px 0 7px; }
-    .project { min-height: 210px; display: flex; flex-direction: column; justify-content: space-between; background: linear-gradient(145deg, #172c4c, #101827); }
-    .project-tag { color: var(--yellow); font-size: .78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
-    .project a { color: var(--blue); font-weight: 700; }
-    .about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 30px; align-items: start; }
-    .highlight { border-left: 3px solid var(--yellow); padding: 5px 0 5px 18px; color: var(--muted); }
-    .contact { text-align: center; border: 1px solid var(--line); border-radius: 24px; padding: 48px 24px; background: linear-gradient(135deg, rgba(20,33,58,.95), rgba(12,20,36,.95)); }
-    .contact p { max-width: 570px; margin: 0 auto 24px; color: var(--muted); }
-    footer { padding: 28px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
-    footer .wrap { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
-    @media (max-width: 760px) {
-      .hero, .about-grid { grid-template-columns: 1fr; }
-      .hero { padding: 70px 0 55px; gap: 30px; }
-      .cards { grid-template-columns: 1fr; }
-      .navlinks { gap: 12px; font-size: .82rem; }
-      nav > .btn { display: none; }
-      h1 { letter-spacing: -2px; }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .logo { font-size: 1.55rem; font-weight: 850; letter-spacing: -1.2px; }
+    .logo span { color: var(--cyan); }
+    .nav-links { display: flex; align-items: center; gap: 30px; color: #d4e0ef; font-weight: 600; }
+    .nav-links a { transition: color .2s; }
+    .nav-links a:hover { color: var(--cyan); }
+    .nav-cta { padding: 11px 18px; border: 1px solid rgba(8,200,232,.5); border-radius: 12px; color: var(--cyan); }
+    .menu-btn { display: none; border: 1px solid var(--line); color: var(--text); background: var(--panel); border-radius: 10px; padding: 8px 12px; cursor: pointer; }
+    .hero { padding: 94px 0 78px; overflow: hidden; position: relative; }
+    .hero::before {
+      content: ""; position: absolute; width: 560px; height: 560px; right: -170px; top: -150px;
+      background: radial-gradient(circle, rgba(26,113,197,.22), transparent 68%); pointer-events: none;
     }
-    @media (max-width: 420px) { nav { gap: 10px; } .logo { font-size: 1.12rem; } .navlinks { gap: 10px; } .navlinks a { font-size: .76rem; } }
+    .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 52px; align-items: center; position: relative; }
+    .eyebrow { color: var(--cyan); font-size: .82rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
+    h1 { font-size: clamp(2.8rem, 6vw, 5.25rem); line-height: 1.04; letter-spacing: -3.5px; margin: 18px 0 24px; }
+    .gradient { background: linear-gradient(100deg, var(--blue), var(--cyan)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .hero-copy { max-width: 590px; color: var(--muted); font-size: 1.18rem; line-height: 1.8; }
+    .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 22px; border-radius: 14px; font-weight: 750; transition: transform .2s, box-shadow .2s; border: 1px solid transparent; cursor: pointer; }
+    .btn:hover { transform: translateY(-3px); }
+    .btn-primary { color: #03121d; background: linear-gradient(110deg, #09c7e8, #43a9ff); box-shadow: 0 12px 34px rgba(8,200,232,.18); }
+    .btn-secondary { border-color: rgba(8,200,232,.45); color: #e8f5ff; background: rgba(8,200,232,.035); }
+    .hero-visual { min-height: 440px; position: relative; display: grid; place-items: center; }
+    .glow { position: absolute; width: 340px; height: 340px; border-radius: 50%; background: rgba(28,126,220,.25); filter: blur(75px); }
+    .browser {
+      width: min(100%, 490px); position: relative; overflow: hidden; border: 1px solid rgba(181,211,246,.2);
+      border-radius: 24px; background: linear-gradient(145deg, #122b49, #0b1b30); box-shadow: 0 28px 80px rgba(0,0,0,.35);
+      transform: rotate(1deg);
+    }
+    .browser-bar { height: 44px; display: flex; align-items: center; gap: 7px; padding: 0 16px; border-bottom: 1px solid var(--line); background: rgba(255,255,255,.025); }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: #5f7691; }
+    .address { margin-left: 10px; height: 20px; flex: 1; border-radius: 20px; background: rgba(255,255,255,.07); }
+    .preview { padding: 27px; }
+    .preview-tag { width: 82px; height: 7px; border-radius: 10px; background: var(--cyan); opacity: .8; }
+    .preview-title { width: 85%; height: 17px; border-radius: 8px; margin: 19px 0 10px; background: #e8f3ff; }
+    .preview-title.short { width: 58%; margin-top: 0; }
+    .preview-copy { width: 90%; height: 7px; border-radius: 8px; margin: 8px 0; background: #718ba8; opacity: .65; }
+    .preview-copy.small { width: 65%; }
+    .preview-button { width: 112px; height: 30px; border-radius: 8px; margin-top: 18px; background: linear-gradient(100deg, var(--cyan), var(--blue)); }
+    .preview-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-top: 28px; }
+    .preview-card { height: 105px; border: 1px solid rgba(180,210,245,.15); border-radius: 12px; background: linear-gradient(145deg, #1b4268, #10233b); }
+    .floating-note { position: absolute; right: -6px; bottom: 35px; padding: 13px 17px; border: 1px solid var(--line); border-radius: 14px; background: #122942; color: #dceeff; box-shadow: 0 14px 35px rgba(0,0,0,.3); font-size: .9rem; }
+    .floating-note strong { color: var(--cyan); }
+    .trust { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 22px 0; color: #9db0c7; text-align: center; font-size: .95rem; }
+    section { padding: 88px 0; }
+    .section-head { max-width: 680px; margin-bottom: 38px; }
+    .section-head h2 { margin: 10px 0 12px; font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.12; letter-spacing: -1.7px; }
+    .section-head p { color: var(--muted); margin: 0; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { padding: 27px; border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(145deg, rgba(19,43,69,.92), rgba(10,25,42,.92)); }
+    .icon-box { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 14px; color: var(--cyan); background: rgba(8,200,232,.1); font-size: 1.35rem; margin-bottom: 20px; }
+    .card h3 { margin: 0 0 9px; font-size: 1.2rem; }
+    .card p { margin: 0; color: var(--muted); font-size: .96rem; }
+    .work-section { background: linear-gradient(180deg, transparent, rgba(14,35,57,.55), transparent); }
+    .projects { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
+    .project { overflow: hidden; border: 1px solid var(--line); border-radius: 22px; background: #0d1e32; }
+    .project-art { min-height: 235px; padding: 24px; display: grid; place-items: center; background: radial-gradient(circle at 50% 45%, #1c5b91, #10233a 68%); }
+    .mock-window { width: 82%; min-height: 160px; padding: 15px; border: 1px solid rgba(255,255,255,.22); border-radius: 13px; background: rgba(6,17,31,.78); box-shadow: 0 16px 40px rgba(0,0,0,.25); }
+    .mock-line { height: 7px; width: 72%; background: #d5e9ff; border-radius: 8px; margin: 11px 0; opacity: .8; }
+    .mock-line.blue { width: 48%; background: var(--cyan); }
+    .mock-blocks { display: flex; gap: 8px; margin-top: 17px; }
+    .mock-blocks i { display: block; height: 48px; flex: 1; border-radius: 7px; background: linear-gradient(145deg, #235b88, #122b46); }
+    .project-info { padding: 22px 24px 25px; }
+    .project-info h3 { margin: 0 0 5px; }
+    .project-info p { color: var(--muted); margin: 0; font-size: .94rem; }
+    .tag { display: inline-block; color: var(--cyan); font-size: .78rem; font-weight: 750; margin-top: 14px; }
+    .about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 55px; align-items: center; }
+    .about-panel { padding: 32px; border: 1px solid var(--line); border-radius: 24px; background: linear-gradient(145deg, #122b47, #0a1a2c); }
+    .about-panel .big { font-size: 3.5rem; line-height: 1; font-weight: 850; letter-spacing: -3px; color: var(--cyan); }
+    .about-panel p { color: var(--muted); margin-bottom: 0; }
+    .about-copy h2 { font-size: clamp(2rem,4vw,3rem); line-height: 1.12; letter-spacing: -1.5px; margin: 10px 0 18px; }
+    .about-copy p { color: var(--muted); }
+    .ticks { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 12px; }
+    .ticks li::before { content: "✓"; color: var(--cyan); font-weight: 900; margin-right: 10px; }
+    .steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; counter-reset: step; }
+    .step { padding: 22px; border: 1px solid var(--line); border-radius: 18px; background: rgba(16,35,58,.7); }
+    .step::before { counter-increment: step; content: "0" counter(step); color: var(--cyan); font-weight: 850; font-size: 1.15rem; }
+    .step h3 { margin: 12px 0 6px; }
+    .step p { margin: 0; color: var(--muted); font-size: .92rem; }
+    .contact-wrap { display: grid; grid-template-columns: .85fr 1.15fr; gap: 35px; align-items: start; }
+    .contact-copy h2 { font-size: clamp(2rem,4vw,3rem); line-height: 1.1; letter-spacing: -1.5px; margin: 10px 0 15px; }
+    .contact-copy p { color: var(--muted); }
+    .contact-card { padding: 28px; border: 1px solid var(--line); border-radius: 22px; background: var(--bg-soft); }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .field { display: grid; gap: 7px; margin-bottom: 15px; }
+    .field.full { grid-column: 1 / -1; }
+    label { font-size: .9rem; color: #dce8f6; font-weight: 650; }
+    input, textarea, select { width: 100%; border: 1px solid rgba(177,207,240,.2); background: #091727; color: var(--text); border-radius: 11px; padding: 12px 13px; outline: none; }
+    input:focus, textarea:focus, select:focus { border-color: var(--cyan); }
+    textarea { min-height: 125px; resize: vertical; }
+    .form-note { color: #91a5bd; font-size: .82rem; margin: 12px 0 0; }
+    #form-status { color: var(--cyan); font-size: .9rem; margin-top: 12px; min-height: 22px; }
+    footer { border-top: 1px solid var(--line); padding: 28px 0; color: #91a5bd; }
+    .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .footer-links a:hover { color: var(--cyan); }
+    @media (max-width: 850px) {
+      .hero-grid, .about-grid, .contact-wrap { grid-template-columns: 1fr; }
+      .hero { padding-top: 68px; }
+      .hero-visual { min-height: 370px; }
+      .cards { grid-template-columns: repeat(2,1fr); }
+      .steps { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 620px) {
+      .container { width: min(100% - 36px, var(--max)); }
+      .nav { min-height: 68px; }
+      .logo { font-size: 1.35rem; }
+      .menu-btn { display: block; }
+      .nav-links { display: none; position: absolute; top: 68px; left: 0; right: 0; padding: 18px 22px 22px; background: #091727; border-bottom: 1px solid var(--line); flex-direction: column; align-items: stretch; gap: 15px; }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 5px 0; }
+      .nav-cta { text-align: center; }
+      .hero { padding: 58px 0 48px; }
+      h1 { font-size: clamp(2.65rem, 12vw, 4rem); letter-spacing: -2.2px; }
+      .hero-copy { font-size: 1.02rem; }
+      .actions { display: grid; grid-template-columns: 1fr; }
+      .btn { width: 100%; }
+      .hero-visual { min-height: 300px; }
+      .preview { padding: 20px; }
+      .preview-card { height: 75px; }
+      .floating-note { right: 0; bottom: 8px; }
+      section { padding: 66px 0; }
+      .cards, .projects, .steps, .form-grid { grid-template-columns: 1fr; }
+      .project-art { min-height: 190px; }
+      .about-panel { padding: 25px; }
+      .contact-card { padding: 20px; }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <nav class="wrap">
-      <a class="logo" href="#home">Vision<span>Lance</span></a>
-      <div class="navlinks">
-        <a href="#services">Services</a><a href="#work">Work</a><a href="#about">About</a>
-      </div>
-      <a class="btn" href="#contact">Let's talk</a>
-    </nav>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="logo" href="#home" aria-label="VisionLance home">Vision<span>Lance</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a class="nav-cta" href="#contact">Start a project</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <div class="wrap hero" id="home">
-      <div>
-        <h1>We turn ideas into <span>digital experiences.</span></h1>
-        <p class="lead">VisionLance creates clean, modern and useful websites that help people and businesses bring their ideas online.</p>
-        <div class="actions">
-          <a class="btn" href="#contact">Start a project</a>
-          <a class="btn outline" href="#work">Explore our work</a>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Creative web development</div>
+          <h1>We turn ideas into <span class="gradient">digital experiences.</span></h1>
+          <p class="hero-copy">VisionLance creates clean, modern and useful websites that help people and businesses bring their ideas online.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#contact">Start a project <span aria-hidden="true">&nbsp;↗</span></a>
+            <a class="btn btn-secondary" href="#work">Explore our work</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Illustration of a modern website design">
+          <div class="glow"></div>
+          <div class="browser">
+            <div class="browser-bar"><i class="dot"></i><i class="dot"></i><i class="dot"></i><div class="address"></div></div>
+            <div class="preview">
+              <div class="preview-tag"></div>
+              <div class="preview-title"></div><div class="preview-title short"></div>
+              <div class="preview-copy"></div><div class="preview-copy small"></div>
+              <div class="preview-button"></div>
+              <div class="preview-cards"><div class="preview-card"></div><div class="preview-card"></div><div class="preview-card"></div></div>
+            </div>
+          </div>
+          <div class="floating-note"><strong>Ideas → Online</strong><br>Designed with purpose</div>
         </div>
       </div>
-      <div class="hero-card">
-        <div class="orb" style="padding:22px"><img src="data:image/png;base64,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
+    </section>
+
+    <div class="trust"><div class="container">Thoughtful design · Responsive development · Clear communication</div></div>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">What we do</div>
+          <h2>Digital services built around <span class="gradient">your goals.</span></h2>
+          <p>From a first online presence to a polished business website, we focus on making every page clear, useful and easy to use.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="icon-box">✦</div><h3>Website Design</h3><p>Modern layouts, thoughtful colours and clear page structures that make a strong first impression.</p></article>
+          <article class="card"><div class="icon-box">⌘</div><h3>Website Development</h3><p>Responsive websites built to work smoothly across phones, tablets and desktop screens.</p></article>
+          <article class="card"><div class="icon-box">▣</div><h3>Landing Pages</h3><p>Focused pages for products, services, campaigns and new ideas that need a clear message.</p></article>
+          <article class="card"><div class="icon-box">↗</div><h3>Portfolio Websites</h3><p>Personal and professional websites that present your skills, projects and experience.</p></article>
+          <article class="card"><div class="icon-box">⚙</div><h3>Website Improvements</h3><p>Layout updates, content refinements and usability improvements for existing websites.</p></article>
+          <article class="card"><div class="icon-box">◎</div><h3>Ongoing Support</h3><p>Help with updates and small improvements as your website and business grow.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="work-section" id="work">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Selected work</div>
+          <h2>Ideas deserve a <span class="gradient">great online home.</span></h2>
+          <p>A look at the kinds of digital experiences VisionLance can create. Replace these concept previews with real client projects as your portfolio grows.</p>
+        </div>
+        <div class="projects">
+          <article class="project">
+            <div class="project-art"><div class="mock-window"><div class="mock-line blue"></div><div class="mock-line"></div><div class="mock-line" style="width:56%"></div><div class="mock-blocks"><i></i><i></i><i></i></div></div></div>
+            <div class="project-info"><h3>Business Website</h3><p>A clean online presence for a growing local business.</p><span class="tag">BUSINESS · CONCEPT</span></div>
+          </article>
+          <article class="project">
+            <div class="project-art" style="background:radial-gradient(circle at 50% 45%,#176a83,#10233a 68%)"><div class="mock-window"><div class="mock-line blue"></div><div class="mock-line" style="width:85%"></div><div class="mock-line" style="width:65%"></div><div class="mock-blocks"><i></i><i></i><i></i></div></div></div>
+            <div class="project-info"><h3>Creator Portfolio</h3><p>A personal space to showcase work, skills and achievements.</p><span class="tag">PORTFOLIO · CONCEPT</span></div>
+          </article>
+          <article class="project">
+            <div class="project-art" style="background:radial-gradient(circle at 50% 45%,#344b9a,#10233a 68%)"><div class="mock-window"><div class="mock-line blue"></div><div class="mock-line"></div><div class="mock-blocks"><i></i><i></i><i></i></div></div></div>
+            <div class="project-info"><h3>Product Landing Page</h3><p>A focused page that introduces a product and its features.</p><span class="tag">LANDING PAGE · CONCEPT</span></div>
+          </article>
+          <article class="project">
+            <div class="project-art" style="background:radial-gradient(circle at 50% 45%,#246c68,#10233a 68%)"><div class="mock-window"><div class="mock-line blue"></div><div class="mock-line" style="width:80%"></div><div class="mock-line" style="width:52%"></div><div class="mock-blocks"><i></i><i></i><i></i></div></div></div>
+            <div class="project-info"><h3>Service Website</h3><p>A simple, helpful way for customers to understand a service.</p><span class="tag">SERVICE · CONCEPT</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div class="about-panel"><div class="eyebrow">The VisionLance approach</div><div class="big">Ideas<br>made real.</div><p>Good websites should look great, feel simple and help people take the next step.</p></div>
+        <div class="about-copy">
+          <div class="eyebrow">About VisionLance</div>
+          <h2>Small details. <span class="gradient">Meaningful experiences.</span></h2>
+          <p>VisionLance is an independent digital web studio focused on creating modern websites for individuals, creators and businesses. Every project starts by understanding the idea, the audience and the goal.</p>
+          <p>Our approach is simple: keep the design clear, make the experience work on mobile and desktop, and build with a purpose.</p>
+          <ul class="ticks"><li>Clean and modern design</li><li>Mobile-friendly layouts</li><li>Simple, user-focused experiences</li><li>Practical solutions for real needs</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow">How it works</div><h2>A clear process from <span class="gradient">start to launch.</span></h2><p>Every project moves through a few simple steps, so expectations stay clear.</p></div>
+        <div class="steps">
+          <article class="step"><h3>Discover</h3><p>We learn about your idea, audience and what the website needs to achieve.</p></article>
+          <articl

@@ -3,491 +3,155 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="VisionLance creates modern websites, applications and affordable digital solutions.">
-<title>VisionLance | Digital Experiences</title>
+<meta name="theme-color" content="#080f20">
+<meta name="description" content="VisionLance is a freelancing agency creating modern websites, web apps and digital experiences. Your Vision. Our Creation.">
+<meta property="og:title" content="VisionLance — Your Vision. Our Creation.">
+<meta property="og:description" content="Modern websites and applications, designed and built to grow your business.">
+<meta property="og:image" content="logo.png">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<title>VisionLance — Your Vision. Our Creation.</title>
 
 <style>
-:root{
-  --bg:#080d19;
-  --panel:#101a2d;
-  --text:#f4f7ff;
-  --muted:#aab6cc;
-  --blue:#65a9ff;
-  --cyan:#00c5e9;
-  --yellow:#ffd45c;
-  --line:rgba(255,255,255,.12);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
-  font-family:Inter,Arial,sans-serif;
-  background:radial-gradient(circle at 85% 5%,rgba(55,119,220,.22),transparent 30%),#080d19;
-  color:var(--text);
-  line-height:1.6;
-}
-a{text-decoration:none;color:inherit}
-.wrap{width:min(1100px,90%);margin:auto}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
-header{
-  position:sticky;
-  top:0;
-  z-index:10;
-  background:rgba(232,246,253,.97);
-  backdrop-filter:blur(16px);
-  box-shadow:0 5px 24px rgba(7,27,59,.1);
+:root{
+  --bg:#080f20; --bg2:#0d1830; --card:#101e38;
+  --blue:#42aaff; --cyan:#65d5ff; --white:#f4f8ff; --muted:#9aabc4;
+  --border:rgba(140,190,255,.13);
 }
-nav{
-  min-height:75px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-}
-.logo{
-  font-size:1.5rem;
-  font-weight:900;
-  color:#071b3b;
-  letter-spacing:-1px;
-}
-.logo span{color:var(--cyan)}
-.navlinks{
-  display:flex;
-  gap:25px;
-  color:#28415f;
-  font-weight:650;
-}
-.navlinks a:hover{color:#008eae}
-.btn{
-  display:inline-flex;
-  justify-content:center;
-  align-items:center;
-  padding:12px 20px;
-  border-radius:12px;
-  background:var(--cyan);
-  color:#06172d;
-  font-weight:800;
-  transition:.2s;
-  box-shadow:0 7px 20px rgba(0,197,233,.16);
-}
-.btn:hover{transform:translateY(-3px)}
-.btn.outline{
-  background:transparent;
-  color:white;
-  border:1px solid var(--cyan);
-  box-shadow:none;
-}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1140px,90%);margin:auto}
+::selection{background:var(--blue);color:#fff}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:6px}
+
+body::before{content:"";position:fixed;width:600px;height:600px;top:-250px;left:-200px;background:radial-gradient(circle,rgba(35,116,255,.13),transparent 70%);pointer-events:none;z-index:-1}
+body::after{content:"";position:fixed;width:600px;height:600px;right:-350px;bottom:-300px;background:radial-gradient(circle,rgba(0,192,255,.10),transparent 70%);pointer-events:none;z-index:-1}
+
+/* NAV */
+header{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(8,15,32,.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--border);transition:.3s}
+header.scrolled{background:rgba(8,15,32,.95);box-shadow:0 10px 40px rgba(0,0,0,.35)}
+nav{min-height:78px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px}
+.brand img{width:44px;height:44px;border-radius:11px;object-fit:contain}
+.brand-name{font-family:'Space Grotesk',sans-serif;font-size:23px;font-weight:700;letter-spacing:-1px}
+.brand-name span:first-child{color:#f3f7ff}
+.brand-name span:last-child{color:var(--blue)}
+.nav-links{display:flex;align-items:center;gap:31px}
+.nav-links a{color:#c1cde0;font-size:13px;transition:.25s}
+.nav-links a:hover{color:var(--cyan)}
+.nav-links a.nav-contact{padding:12px 20px;border-radius:8px;background:linear-gradient(110deg,#2789ee,#48c5ff);color:#04101e;font-weight:800}
+.nav-links a.nav-contact:hover{color:#04101e;transform:translateY(-2px)}
+.menu-btn{display:none;background:none;color:#fff;border:0;font-size:27px;cursor:pointer}
 
 /* HERO */
-.hero{
-  padding:100px 0 85px;
-  display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:50px;
-  align-items:center;
-}
-.eyebrow{
-  color:var(--yellow);
-  text-transform:uppercase;
-  letter-spacing:2px;
-  font-size:.8rem;
-  font-weight:800;
-}
-h1{
-  font-size:clamp(2.7rem,6vw,5rem);
-  line-height:1.08;
-  letter-spacing:-3px;
-  margin:18px 0;
-}
-h1 span{color:var(--blue)}
-.lead{color:var(--muted);font-size:1.12rem}
-.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
-.hero-card{
-  padding:20px;
-  border:1px solid var(--line);
-  border-radius:24px;
-  background:linear-gradient(145deg,#14213a,#0c1424);
-  box-shadow:0 25px 80px rgba(0,0,0,.25);
-}
-.brand-image{
-  width:100%;
-  display:block;
-  border-radius:16px;
-  object-fit:contain;
-}
-.mini-stats{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-  margin-top:15px;
-}
-.stat{
-  padding:14px;
-  background:rgba(255,255,255,.04);
-  border:1px solid var(--line);
-  border-radius:13px;
-}
-.stat strong{display:block}
-.stat small{color:var(--muted)}
+.hero{min-height:780px;display:flex;align-items:center;padding:145px 0 85px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:55px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:9px 14px;border:1px solid rgba(75,175,255,.27);border-radius:50px;color:#80cbff;font-size:12px;background:rgba(42,135,255,.07);margin-bottom:27px}
+.dot{width:7px;height:7px;background:#43d7a0;border-radius:50%;box-shadow:0 0 12px #43d7a0}
+.hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(43px,6.2vw,76px);line-height:1.06;letter-spacing:-4px;margin-bottom:24px}
+.gradient{background:linear-gradient(100deg,#51b5ff,#8de3ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-description{max-width:490px;color:var(--muted);line-height:1.9;font-size:15px;margin-bottom:33px}
+.actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{padding:15px 23px;display:inline-flex;align-items:center;justify-content:center;gap:6px;border-radius:8px;font-size:13px;font-weight:700;transition:.3s;cursor:pointer;border:0}
+.btn-primary{color:#061326;background:linear-gradient(110deg,#2995ff,#65d7ff);box-shadow:0 10px 35px rgba(43,148,255,.17)}
+.btn-primary:hover{transform:translateY(-4px);box-shadow:0 15px 40px rgba(43,148,255,.3)}
+.btn-secondary{border:1px solid rgba(130,190,255,.28);color:#fff;background:transparent}
+.btn-secondary:hover{background:rgba(65,160,255,.12)}
+.hero-trust{display:flex;gap:26px;margin-top:38px;flex-wrap:wrap}
+.hero-trust div{font-size:12px;color:#8fa6c4;display:flex;align-items:center;gap:8px}
+.hero-trust b{color:var(--cyan)}
 
-/* SECTIONS */
-section{padding:75px 0}
-.section-head{max-width:650px;margin-bottom:32px}
-h2{
-  font-size:clamp(2rem,4vw,3rem);
-  line-height:1.15;
-  margin:10px 0;
-  letter-spacing:-1px;
-}
-.muted{color:var(--muted)}
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-.card{
-  padding:25px;
-  border:1px solid var(--line);
-  border-radius:18px;
-  background:rgba(16,26,45,.85);
-  transition:.25s;
-}
-.card:hover{
-  transform:translateY(-5px);
-  border-color:var(--cyan);
-}
-.card .icon{font-size:2rem}
-.card h3{margin:12px 0 8px}
-.coming{
-  display:inline-block;
-  margin-top:15px;
-  padding:5px 11px;
-  border-radius:20px;
-  background:rgba(255,212,92,.12);
-  color:var(--yellow);
-  font-size:.75rem;
-  font-weight:800;
-  letter-spacing:1px;
-}
+.hero-visual{position:relative;min-height:420px;display:flex;align-items:center;justify-content:center}
+.visual-glow{position:absolute;width:340px;height:340px;border-radius:50%;background:#168fff;opacity:.12;filter:blur(90px)}
+.dashboard{position:relative;width:100%;max-width:470px;background:linear-gradient(145deg,#142746,#0b172c);border:1px solid rgba(116,183,255,.22);border-radius:19px;padding:21px;box-shadow:0 30px 100px rgba(0,0,0,.4);transform:rotate(-2deg);animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-12px) rotate(-1deg)}}
+.dash-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;color:#d8e8ff;font-size:12px}
+.dash-dots{display:flex;gap:5px}
+.dash-dots i{width:7px;height:7px;border-radius:50%;background:#51b5ff}
+.dash-label{color:#7e9bbb;font-size:10px;letter-spacing:2px;margin-bottom:10px}
+.dash-title{font-family:'Space Grotesk',sans-serif;font-size:27px;font-weight:700;margin-bottom:20px}
+.dash-title span{color:var(--blue)}
+.dash-box{border:1px solid var(--border);background:rgba(255,255,255,.025);padding:16px;border-radius:11px;margin-top:12px}
+.dash-box strong{display:block;font-size:13px;margin-bottom:6px}
+.dash-box small{color:#92a7c3;font-size:10px}
+.dash-bars{display:flex;align-items:end;gap:9px;height:90px;margin-top:20px}
+.dash-bars i{flex:1;border-radius:5px 5px 0 0;background:linear-gradient(to top,#217ce5,#5cd1ff)}
+.dash-bars i:nth-child(1){height:35%}.dash-bars i:nth-child(2){height:60%}.dash-bars i:nth-child(3){height:45%}
+.dash-bars i:nth-child(4){height:85%}.dash-bars i:nth-child(5){height:65%}.dash-bars i:nth-child(6){height:100%}
+.floating-tag{position:absolute;right:-12px;bottom:42px;padding:14px 18px;background:#142b4a;border:1px solid var(--border);border-radius:12px;color:#a8ddff;font-size:12px;box-shadow:0 12px 40px #0005}
 
-/* WORK */
-.project{
-  min-height:220px;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  background:linear-gradient(145deg,#172c4c,#101827);
-}
-.project-tag{
-  color:var(--yellow);
-  font-size:.78rem;
-  font-weight:800;
-  text-transform:uppercase;
-  letter-spacing:1px;
-}
-.project a{color:var(--blue);font-weight:700}
+/* COMMON */
+section{padding:100px 0}
+.section-head{max-width:620px;margin:0 auto 52px;text-align:center}
+.section-label{color:var(--blue);text-transform:uppercase;letter-spacing:3px;font-size:11px;font-weight:800;margin-bottom:14px}
+.section-head h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(30px,4vw,44px);letter-spacing:-1.8px;margin-bottom:16px;line-height:1.12}
+.section-head p{color:var(--muted);line-height:1.8;font-size:14px}
 
-/* ABOUT */
-.about-grid{
-  display:grid;
-  grid-template-columns:.9fr 1.1fr;
-  gap:35px;
-  align-items:center;
-}
-.about-box{
-  padding:30px;
-  border-radius:20px;
-  background:linear-gradient(145deg,#14213a,#101827);
-  border:1px solid var(--line);
-}
-.about-box strong{color:var(--cyan)}
-.highlight{
-  border-left:3px solid var(--yellow);
-  padding:5px 0 5px 18px;
-  color:var(--muted);
-}
+/* STATS */
+.stats{padding:0 0 30px}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--border);border-radius:16px;background:linear-gradient(145deg,#0f1d36,#0b162a);overflow:hidden}
+.stat{padding:28px 20px;text-align:center;border-right:1px solid var(--border)}
+.stat:last-child{border-right:0}
+.stat strong{display:block;font-family:'Space Grotesk',sans-serif;font-size:32px;color:var(--cyan);letter-spacing:-1px}
+.stat span{font-size:12px;color:var(--muted)}
 
-/* CONTACT */
-.contact{
-  text-align:center;
-  padding:50px 25px;
-  border:1px solid var(--line);
-  border-radius:24px;
-  background:linear-gradient(135deg,#14213a,#0c1424);
-}
-.contact p{
-  max-width:570px;
-  margin:12px auto 25px;
-  color:var(--muted);
-}
-.email{
-  display:inline-block;
-  color:var(--cyan);
-  margin-top:18px;
-  font-weight:700;
-}
+/* SERVICES */
+.services{background:linear-gradient(180deg,transparent,rgba(18,39,70,.35),transparent)}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}
+.service-card{background:linear-gradient(145deg,#11213c,#0c172b);border:1px solid var(--border);border-radius:15px;padding:29px;transition:.35s;position:relative;overflow:hidden}
+.service-card::before{content:"";position:absolute;width:130px;height:130px;right:-70px;top:-70px;border-radius:50%;background:rgba(54,153,255,.13);filter:blur(20px)}
+.service-card:hover{transform:translateY(-8px);border-color:rgba(75,178,255,.5)}
+.service-icon{width:48px;height:48px;display:grid;place-items:center;background:rgba(49,150,255,.12);border:1px solid rgba(68,165,255,.2);border-radius:12px;font-size:22px;margin-bottom:24px;color:var(--cyan)}
+.service-card h3{font-family:'Space Grotesk',sans-serif;font-size:19px;margin-bottom:12px}
+.service-card p{color:var(--muted);font-size:13px;line-height:1.8}
+.coming{display:inline-block;font-size:9px;color:#8bd6ff;border:1px solid rgba(84,186,255,.3);background:rgba(47,145,255,.1);padding:5px 9px;border-radius:30px;margin-top:16px;letter-spacing:1px}
 
-/* FOOTER */
-footer{
-  padding:30px 0;
-  border-top:1px solid var(--line);
-  color:var(--muted);
-  font-size:.9rem;
-}
-footer .wrap{
-  display:flex;
-  justify-content:space-between;
-  gap:15px;
-  flex-wrap:wrap;
-}
+/* PROCESS */
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:19px;counter-reset:step}
+.step{position:relative;padding:28px 24px;border:1px solid var(--border);border-radius:15px;background:rgba(255,255,255,.02)}
+.step::before{counter-increment:step;content:"0" counter(step);font-family:'Space Grotesk',sans-serif;font-size:34px;font-weight:700;background:linear-gradient(100deg,#3b9bff,#8de3ff);-webkit-background-clip:text;background-clip:text;color:transparent;display:block;margin-bottom:14px}
+.step h3{font-family:'Space Grotesk',sans-serif;font-size:17px;margin-bottom:10px}
+.step p{color:var(--muted);font-size:12.5px;line-height:1.75}
 
-@media(max-width:760px){
-  .hero,.about-grid{grid-template-columns:1fr}
-  .hero{padding:65px 0 50px;gap:30px}
-  .cards{grid-template-columns:1fr}
-  .navlinks{gap:12px;font-size:.82rem}
-  nav>.btn{display:none}
-  h1{letter-spacing:-2px}
-}
-@media(max-width:420px){
-  .logo{font-size:1.15rem}
-  .navlinks{gap:9px}
-  .navlinks a{font-size:.75rem}
-}
-</style>
-</head>
+/* PROJECTS */
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:23px}
+.project-card{overflow:hidden;background:var(--card);border:1px solid var(--border);border-radius:15px;transition:.3s}
+.project-card:hover{transform:translateY(-6px);border-color:rgba(75,178,255,.4)}
+.project-preview{min-height:220px;padding:25px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#112c50,#101b33)}
+.project-preview.alt{background:linear-gradient(135deg,#0f3a52,#101b33)}
+.project-preview.alt2{background:linear-gradient(135deg,#1d2b66,#101b33)}
+.project-preview.alt3{background:linear-gradient(135deg,#0d4258,#0f1c36)}
+.preview-window{width:90%;border-radius:10px;overflow:hidden;border:1px solid #ffffff25;background:#09152a;box-shadow:0 15px 40px #0005}
+.preview-header{height:22px;background:#1b3555;display:flex;align-items:center;gap:4px;padding-left:10px}
+.preview-header i{height:5px;width:5px;border-radius:50%;background:#64baff}
+.preview-content{padding:23px}
+.preview-content strong{display:block;font-family:'Space Grotesk',sans-serif;font-size:19px;margin-bottom:9px}
+.preview-content span{display:block;font-size:9px;color:#9bb3d3}
+.preview-line{height:7px;width:65%;background:#317fca;border-radius:10px;margin-top:15px}
+.preview-line.short{width:40%}
+.preview-chart{display:flex;align-items:end;gap:6px;height:44px;margin-top:16px}
+.preview-chart i{flex:1;background:linear-gradient(to top,#2a7fe0,#62d0ff);border-radius:3px 3px 0 0}
+.preview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:14px}
+.preview-grid i{height:34px;border-radius:5px;background:#1c4472}
+.project-info{padding:22px}
+.project-info h3{font-size:17px;margin-bottom:8px}
+.project-info p{color:var(--muted);font-size:12px;line-height:1.7}
+.project-type{color:#65c6ff;font-size:10px;letter-spacing:1px;margin-bottom:10px;display:block}
+.project-note{margin-top:22px;color:#8499b7;text-align:center;font-size:11px}
 
-<body>
-
-<header>
-<nav class="wrap">
-  <a class="logo" href="#home">Vision<span>Lance</span></a>
-
-  <div class="navlinks">
-    <a href="#services">Services</a>
-    <a href="#work">Work</a>
-    <a href="#about">About</a>
-  </div>
-
-  <a class="btn" href="#contact">Let's talk</a>
-</nav>
-</header>
-
-<main>
-
-<!-- HERO -->
-<div class="wrap hero" id="home">
-  <div>
-    <div class="eyebrow">Welcome to VisionLance</div>
-
-    <h1>We turn ideas into <span>digital experiences.</span></h1>
-
-    <p class="lead">
-      VisionLance creates modern websites, applications
-      and affordable digital solutions that help people
-      and businesses bring their ideas online.
-    </p>
-
-    <div class="actions">
-      <a class="btn" href="#contact">Start a project</a>
-      <a class="btn outline" href="#work">Explore our work</a>
-    </div>
-  </div>
-
-  <div class="hero-card">
-    <img class="brand-image"
-    src="data:image/jpeg;base64,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"
-    alt="VisionLance official logo">
-
-    <div class="mini-stats">
-      <div class="stat">
-        <strong>Creative</strong>
-        <small>Modern designs</small>
-      </div>
-      <div class="stat">
-        <strong>Digital</strong>
-        <small>Smart solutions</small>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- SERVICES -->
-<section id="services">
-<div class="wrap">
-  <div class="section-head">
-    <div class="eyebrow">What we do</div>
-    <h2>Our Services</h2>
-    <p class="muted">Digital solutions designed to help your ideas grow.</p>
-  </div>
-
-  <div class="cards">
-
-    <div class="card">
-      <div class="icon">🌐</div>
-      <h3>Modern Websites</h3>
-      <p class="muted">
-        Professional, responsive and modern websites
-        for businesses, creators and individuals.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="icon">📚</div>
-      <h3>Affordable Digital Courses</h3>
-      <p class="muted">
-        Learn digital skills through accessible,
-        beginner-friendly courses at affordable prices.
-      </p>
-      <span class="coming">COMING SOON</span>
-    </div>
-
-    <div class="card">
-      <div class="icon">📱</div>
-      <h3>App Creation</h3>
-      <p class="muted">
-        Creative and useful mobile and web applications
-        designed around your ideas and needs.
-      </p>
-    </div>
-
-  </div>
-</div>
-</section>
-
-<!-- WORK -->
-<section id="work">
-<div class="wrap">
-  <div class="section-head">
-    <div class="eyebrow">Our portfolio</div>
-    <h2>Selected Work</h2>
-    <p class="muted">
-      Explore our creative direction and digital projects.
-    </p>
-  </div>
-
-  <div class="cards">
-
-    <div class="card project">
-      <div>
-        <div class="project-tag">Web Development</div>
-        <h3>Business Websites</h3>
-        <p class="muted">
-          Professional online experiences for growing businesses.
-        </p>
-      </div>
-      <a href="#contact">Start a similar project →</a>
-    </div>
-
-    <div class="card project">
-      <div>
-        <div class="project-tag">Creative Design</div>
-        <h3>Personal Portfolios</h3>
-        <p class="muted">
-          Modern portfolios to showcase skills and achievements.
-        </p>
-      </div>
-      <a href="#contact">Start a similar project →</a>
-    </div>
-
-    <div class="card project">
-      <div>
-        <div class="project-tag">App Development</div>
-        <h3>Digital Applications</h3>
-        <p class="muted">
-          Useful digital experiences built around creative ideas.
-        </p>
-      </div>
-      <a href="#contact">Start a similar project →</a>
-    </div>
-
-  </div>
-</div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-<div class="wrap">
-  <div class="about-grid">
-
-    <div>
-      <div class="eyebrow">Who we are</div>
-      <h2>Ideas deserve a great digital presence.</h2>
-      <p class="muted">
-        We believe every great idea deserves the opportunity
-        to reach the digital world.
-      </p>
-    </div>
-
-    <div class="about-box">
-      <h3>About VisionLance</h3>
-
-      <p class="muted" style="margin-top:12px">
-        VisionLance is a creative digital venture focused on
-        building modern websites, applications and affordable
-        digital learning experiences.
-      </p>
-
-      <p class="highlight" style="margin-top:22px">
-        Our mission is to turn creative ideas into meaningful
-        digital experiences through design, technology and innovation.
-      </p>
-
-      <div style="margin-top:25px">
-        <p class="muted">Founder</p>
-        <h3 style="color:var(--cyan);margin-top:4px">Grish Bhat</h3>
-        <p class="muted">Founder of VisionLance</p>
-      </div>
-    </div>
-
-  </div>
-</div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-<div class="wrap">
-  <div class="contact">
-    <div class="eyebrow">Let's work together</div>
-
-    <h2>Have an idea? Let's build it.</h2>
-
-    <p>
-      Whether you need a website, an application
-      or a digital solution, let's discuss how we
-      can bring your idea to life.
-    </p>
-
-    <a class="btn" href="mailto:visionlance16@gmail.com">
-      Email VisionLance →
-    </a>
-
-    <br>
-
-    <a class="email" href="mailto:visionlance16@gmail.com">
-      visionlance16@gmail.com
-    </a>
-  </div>
-</div>
-</section>
-
-</main>
-
-<!-- FOOTER -->
-<footer>
-<div class="wrap">
-  <div>
-    <a class="logo" href="#home">Vision<span>Lance</span></a>
-    <p>Turning ideas into digital experiences.</p>
-  </div>
-
-  <p>© <span id="year"></span> VisionLance. All rights reserved.</p>
-</div>
-</footer>
-
-<script>
-document.getElementById("year").textContent =
-new Date().getFullYear();
-</script>
-
-</body>
-</html>
+/* WHY */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:60px}
+.why-content h2{font-family:'Space Grotesk',sans-serif;font-size:40px;letter-spacing:-1.8px;margin-bottom:19px;line-height:1.12}
+.why-content>p{color:var(--muted);font-size:14px;line-height:1.9;margin-bottom:28px}
+.feature{display:flex;gap:14px;margin:20px 0}
+.feature-icon{min-width:36px;height:36px;display:grid;place-items:center;color:var(--cyan);background:#15365a;border-radius:9px}
+.feature h4{font-size:13px;margin-bottom:5px}
+.feature p{color:var(--muted);font-size:11.5px;line-height:1.6}
+.why-panel{border:1px solid var(--border);background:linear-gradient(145deg,#142847,#0b172c);border-radius:18px;padding:34px;box-shadow:0 20px 70px #0003}
+.why-panel h3{font-family:'Space Grotesk',sans-serif;font-size:24px;margin-bottom:15px}
+.why-panel p{color:va
